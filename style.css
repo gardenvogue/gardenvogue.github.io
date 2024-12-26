@@ -1,0 +1,179 @@
+:root {
+    --primary-green: #6A9084;
+    --light-green: #C8D2BE;
+    --cream: #F4F0D9;
+    --dark-text: #2C3639;
+    --white: #ffffff;
+    --bg-green: #e8f3e8;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(rgba(232, 243, 232, 0.95), rgba(232, 243, 232, 0.95)),
+                url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,50 Q50,20 70,50" stroke="%236A9084" fill="none" stroke-width="2"/><path d="M20,70 Q50,40 80,70" stroke="%23C8D2BE" fill="none" stroke-width="2"/></svg>');
+    color: var(--dark-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    color: var(--primary-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .logo span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .message-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-text {
+    font-size: 1.2rem;
+    color: var(--primary-green);
+    font-weight: 700;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .instagram-btn {
+    background-color: var(--primary-green);
+    color: var(--white);
+  }
+  
+  .contact-btn {
+    background-color: var(--light-green);
+    color: var(--dark-text);
+    flex: 1;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instagram-btn:hover {
+    background-color: #5a7d73;
+  }
+  
+  .contact-btn:hover {
+    background-color: #b8c2ae;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .message-box {
+      padding: 2rem;
+    }
+    
+    .contact-buttons {
+      flex-direction: column;
+    }
+  
+    .logo-img {
+      height: 32px;
+    }
+  }
